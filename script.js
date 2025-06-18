@@ -44,7 +44,23 @@ controls.forEach((e) => {
             showNav(index);
         }
     })
-})
-show(imageIndex);
+});
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        show(index);
+        showDots(index);
+        showNav(index);
+    });
+});
 
+nav.forEach((navigation, index) => {
+    navigation.addEventListener('click', () => {
+        show(index);
+        showDots(index);
+        showNav(index);
+    });
+});
+show(imageIndex);
+showDots(dotsIndex);
+showNav(navIndex);
 
